@@ -60,22 +60,14 @@ public class FoodTruckApp {
 
 	public void highestRating() {
 
-		int highest = fleet[0].getRating();
+		int highest = 0;
 
-		for (int i = 0; i < fleet.length; i++) {
-
-			if (fleet[i] == null) {
-
-			} else if (highest < fleet[i].getRating()) {
-
-				highest = fleet[i].getRating();
-				
-			}
-			
+		for (int i = 1; i < fleet.length; i++) {
+if(fleet[i] != null && fleet[i].getRating() > fleet[highest].getRating()) {
+	highest = i;
+}
 		}
-		System.out.println("The highest rated truck is: " + highest);
-		
-		
+		System.out.println(fleet[highest].toString());
 	}
 
 	public void displayFoodTrucks() {
@@ -84,7 +76,7 @@ public class FoodTruckApp {
 			if (fleet[i] == null) {
 
 			} else {
-				System.out.println(fleet[i].ToString());
+				System.out.println(fleet[i].toString());
 			}
 		}
 

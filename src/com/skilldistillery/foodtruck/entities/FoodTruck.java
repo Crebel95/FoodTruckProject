@@ -9,7 +9,7 @@ public class FoodTruck {
 	private static int count;
 	
 
-	public String ToString() {
+	public String toString() {
 		String output = " ID number: " + idNum + " Name: " + name + " " + "Food type: " + foodType + " " + "Rating: " + rating;
 		return output;
 	}
